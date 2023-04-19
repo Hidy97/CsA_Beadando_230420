@@ -36,32 +36,46 @@
                 </ul>
             </div>
         </nav>
-        <article class="container">
+        <article class="container col-md-12">
             <form action="#">
-                <label for="nev"></label>
-                <input type="text" id="neve" name="nev" placeholder="Növény neve">
+                <label for="neve"></label>
+                <input type="text" id="sznev" name="nev" placeholder="Növény neve">
 
-                <label for="lNev"></label>
+                <label for="lNeve"></label>
                 <input type="text" id="lNeve" name="lNev" placeholder="Növény latin neve">
 
-                <label for="eheto"></label>
-                <input type="text" id="ehetoE" name="eheto" placeholder="EHET(E) v. MÉRG(M)">
+                <label for="ehetoE"></label>
+                <select name="ehetoE" id="ehetoE">
+                    <option value="eheto">EHETŐ</option>
+                    <option value="mergezo">MÉRGEZŐ</option>
+                </select>
 
-                <label for="gyResz"></label>
-                <input type="text" id="gyujtResz" name="gyResz" placeholder="lev, vir, gyök, term, álterm">
+                <label for="gyujtResz"></label>
+                <select name="gyujtResz" id="gyujtResz">
+                    <option value="level">levelek</option>
+                    <option value="virag">virágzat</option>
+                    <option value="gyoker">gyökérzet</option>
+                    <option value="egyeb">egyéb</option>
+                </select>
 
-                <label for="gyIdo"></label>
-                <input type="text" id="gyujtIdo" name="gyIdo" placeholder="t(avasz), ny(ár), ő(sz)">
+                <label for="gyujtIdo"></label>
+                <select name="gyujtIdo" id="gyujtIdo">
+                    <option value="nyar">Nyár</option>
+                    <option value="nyar">Ősz</option>
+                    <option value="nyar">Tavasz</option>
+                </select>
 
                 <label for="megjegyzes"></label>
                 <input type="text" id="megjegyzes" name="megjegyzes" placeholder="MEGJEGYZÉS">
 
                 <label for="gomb"></label>
                 <input class="btn btn-primary" type="submit" id="gomb" name="gomb" value="Új elem">
+
             </form>
-            <section id="tablazat"></section>
+
         </article>
-        <footer>Családi Alexandra</footer>
+        <section id="tablazat"></section>
+        <footer class="container col-md-2">Családi Alexandra</footer>
     </main>
 </body>
 

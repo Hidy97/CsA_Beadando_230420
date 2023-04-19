@@ -6,36 +6,30 @@ import { szurNevSzerint } from "./szures.js";
 
 $(function(){
 /**
-    const nevELEM = $("#nev");
+    const nevELEM = $("#sznev");
     nevELEM.on("keyup", function () {
         szuresiFeltetel = nevELEM.val()
         szurtLista = szurNevSzerint(OBJEKTUMLISTA, szuresiFeltetel)
     });
 
-    nevSzerint();
+    
  */
-/**
-    const szovegElem = $(kulcsLista);
-    szovegElem.on("keyup", function(){
-            szuresiFeltetel = szovegElem.val()
-            szurtLista = rendezesSzoveg(OBJEKTUMLISTA, szuresiFeltetel)
-    });
-
-    nevSzerint();
-     */
-    const tablazat = $("#tablazat");
-    tablazatbanMegjelenit(OBJEKTUMLISTA, tablazat);
+   
+    init();
 });
-/**
-function nevSzerint() {
-    const tablazat = $("#tablazat")
-    let t = tablazatbanMegjelenit(OBJEKTUMLISTA);
-    tablazat.html(t);
+
+function init() {
+    const tablazat = $("#tablazat");
+    let txt= tablazatbanMegjelenit(OBJEKTUMLISTA, kulcsLista);
+    tablazat.html(txt);
+   
+  
     console.log($("#nev"))
-    $("#nev").click(function () {
-        rendezesObjektum(OBJEKTUMLISTA, "nev")
+    $("table th").click(function (event) {
+        let kulcs=$(event.target).attr("id")
+        console.log(kulcs)
+        rendezesObjektum(OBJEKTUMLISTA, kulcs)
         console.log(OBJEKTUMLISTA)
-        nevSzerint();
+        init();
     });
 }
- */

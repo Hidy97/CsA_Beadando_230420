@@ -1,12 +1,23 @@
-export function tablazatbanMegjelenit(OBJEKTUMLISTA, tablazat) {
+export function tablazatbanMegjelenit(OBJEKTUMLISTA, kulcsLista) {
+    console.log(kulcsLista[0]);
     let text = "<table class='table table-striped'>";
-    text += "<tr class='table table-dark'><th id='nev' class='kattint'>Név⇅</th><th id='lNev' class='kattint'>Latin név⇅</th><th id='eheto' class='kattint'>Besorolás⇅</th><th id='gyResz' class='kattint'>Gyűjthető rész(ek)⇅</th><th id='gyIdo' class='kattint'>Gyűjtési időszak⇅</th><th id='megj'>MEGJEGYZÉS</th><th id='torles'>Törlés</th></tr>"
+    text += "<tr class='table table-dark'>"
+    for (const key in kulcsLista[0]) {
+        text += "<th class='kattint' id='" + key + "' >" +kulcsLista[0][key]+ "⇅ </th>"
+    }
+   
+    text += "<th id='torles'>Törlés</th></tr>"
     for (let i = 0; i < OBJEKTUMLISTA.length; i++) {
-        text += "<tr><td>" + OBJEKTUMLISTA[i].nev + "</td><td>" + OBJEKTUMLISTA[i].latinNev + "</td><td>" + OBJEKTUMLISTA[i].ehetoE + "</td><td>" + OBJEKTUMLISTA[i].gyujthetoResz + "</td><td>" + OBJEKTUMLISTA[i].gyujtesiIdo + "</td><td>" + OBJEKTUMLISTA[i].megjegyzes + "</td><td>❌</td></tr>";
+        text += "<tr>"
+        for (const key in OBJEKTUMLISTA[i]) {
+            text += "<td>" + OBJEKTUMLISTA[i][key] + "</td>"
+        }
+     
+        text += "<td>❌</td></tr>";
     }
 
     /**Jquery appendet használ */
 
     text += "</table>";
-    tablazat.append(text);
+   return text;
 }

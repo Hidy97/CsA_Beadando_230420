@@ -8,10 +8,13 @@ export const OBJEKTUMLISTA = [
 ];
 
 export let kulcsLista = [
-    { nev: "nev" },
-    { latinNev: "lNev" },
-    { ehetoE: "eheto" },
-    { gyujthetoResz: "gyResz" },
-    { gyujtesiIdo: "gyIdo" },
-    { megjegyzes: "megj" }
+    {
+        nev: "Név ",
+        latinNev: "Latin név ",
+        ehetoE: "Ehető-e? ",
+        gyujthetoResz: "Gyűjthető Rész ",
+        gyujtesiIdo: "Gyűjtés Idő ",
+        mergezoHasonmas: "Mérgező hasonmás ",
+        megjegyzes: "MEGJEGYZÉS "
+    }
 ];
